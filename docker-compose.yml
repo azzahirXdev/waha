@@ -1,0 +1,12 @@
+services:
+  waha:
+    image: devlikeapro/waha:latest
+    container_name: wahaku
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "3145:3145"
+    volumes:
+      - ./sessions:/app/sessions
+      - ./media:/app/.media
